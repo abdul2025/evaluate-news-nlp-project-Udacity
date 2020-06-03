@@ -1,5 +1,42 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Lato&family=Raleway&display=swap');
+$headerBackgroundColor: #002330;
+$fontKalam: 'Kalam', cursive;
+$fontLato: 'Lato', cursive;
+$fontRaleway: 'Raleway', cursive;
+#TopHeader {
+	display: grid;
+	justify-content: center;
+	align-items: start;
+	gap: 10px;
+	background-color: $headerBackgroundColor;
+	transition: background-color 1.5s ease-in;
+	// background-image: url(../images/abstract-art-blur-bright-373543.jpg);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	color: white;
+	height: 100vh;
+	.logo {
+		align-self: center;
+		height: 600px;
+		width: 600px;
+		margin: 0 auto;
+		.logo-img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.topNavBar {
+		.list {
+			display: flex;
+			.headerList {
+				a {
+					color: white;
+					padding: 10px;
+					text-decoration: none;
+					font-family: $fontRaleway;
+					font-size: 20px;
+				}
+			}
+		}
+	}
 }
