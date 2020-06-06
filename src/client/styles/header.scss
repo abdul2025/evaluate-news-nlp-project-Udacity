@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Lato&family=Raleway&display=swap');
-$headerBackgroundColor: #002330;
+$headerBackgroundColor: #e5e2e2;
 $fontKalam: 'Kalam', cursive;
 $fontLato: 'Lato', cursive;
 $fontRaleway: 'Raleway', cursive;
+$cards-padding: 10%;
+@mixin top-border($color) {
+	border-top: 5px solid $color;
+}
+* {
+	border: 1px solid red;
+}
+
 #TopHeader {
 	display: grid;
 	justify-content: center;
@@ -10,31 +18,92 @@ $fontRaleway: 'Raleway', cursive;
 	gap: 10px;
 	background-color: $headerBackgroundColor;
 	transition: background-color 1.5s ease-in;
-	// background-image: url(../images/abstract-art-blur-bright-373543.jpg);
-	// background-repeat: no-repeat;
-	// background-size: cover;
 	color: white;
 	height: 100vh;
+	width: 100%;
 	.logo {
-		align-self: center;
-		height: 600px;
-		width: 600px;
+		align-self: start;
+		height: 350px;
+		width: 350px;
 		margin: 0 auto;
 		.logo-img {
 			width: 100%;
 			height: 100%;
+			box-shadow: 0px 0px 63px 13px #545456;
+			border-radius: 64%;
+			margin: 18px 0 auto;
+			background-color: #e8e8e8;
 		}
 	}
 	.topNavBar {
-		.list {
-			display: flex;
-			.headerList {
+		width: 100%;
+		display: grid;
+
+		.cards-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 10px;
+			justify-self: center;
+			.middle-cards {
+				grid-column: 2;
+				grid-row: 1 / 45;
+				display: grid;
+				gap: 10px;
+				margin: 0 50px 0 50px;
+				.top-card {
+					@include top-border(red);
+				}
+				.botton-card {
+					@include top-border(rgb(29, 216, 97));
+				}
+			}
+			.left-card {
+				grid-column: 1;
+				grid-row: 11 / 33;
+				@include top-border(#6fbeee);
+			}
+			.right-card {
+				@include top-border(#ccc905);
+				background-color: red;
+				grid-column: 3;
+				grid-row: 11 / 33;
+			}
+			.card {
+				background-color: #f3f1f1;
+				margin: 2px;
+				padding: 13px 66px 0 38px;
+				-webkit-box-shadow: 7px 12px 20px 1px #545456;
+				-moz-box-shadow: 7px 12px 20px 1px #545456;
+				box-shadow: 7px 12px 20px 1px #545456;
+				border-radius: 5px;
+				.card-icon {
+					img {
+						width: 80px;
+						padding: 12px;
+						margin-right: -59px;
+					}
+				}
+				.card-desc {
+					max-width: 171px;
+					line-height: 1.3;
+					padding: 12px 0 15px 0;
+					color: #7b7878;
+				}
 				a {
-					color: white;
-					padding: 10px;
 					text-decoration: none;
 					font-family: $fontRaleway;
-					font-size: 20px;
+					display: grid;
+
+					justify-items: center;
+					height: 100%;
+					:nth-child(3) {
+						justify-self: end;
+					}
+					:nth-child(1) {
+						font-size: 30px;
+						justify-self: start;
+						color: #666161;
+					}
 				}
 			}
 		}
