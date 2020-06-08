@@ -7,17 +7,19 @@
     <body>
         <div id= 'fullPageWarning'>
         <header id="TopHeader">
-                <div class="logo"></div>
+                <div class="logo">
+                 <h1>Sentiment analyzation</h1>
+                </div>
                 <nav class="topNavBar">
                   <ul class="cards-list">
                     <li class="card left-card">
-                        <a href="Concept"> 
+                        <a href=""> 
                             <h6 class="card-title">Concept</h6>
                             <p class="card-desc">Sentiment analysis is the interpretation and classification of emotions positive ...</p>
                             <p class="card-icon">icon</p>
                         </a>
                     </li>
-                    <div class="middle-cards">
+                    <!-- <div class="middle-cards">
                         <li class="card top-card">
                             <a href="Importance">
                                  <h6 class="card-title">Importance</h6>
@@ -25,30 +27,47 @@
                                  <p class="card-icon">icon</p>
                                 </a>
                         </li>
-                        <li class="card botton-card"><a href="Analysis">
-                            <h6 class="card-title">Analysis here</h6>
-                            <p class="card-desc">There is a wealth of information out there hidden in ...</p>
-                            <p class="card-icon">icon</p>
-                           </a></li>
-                    </div>
-                    <li class="card right-card"><a href="Reference">
+                        <li class="card botton-card">
+                        <a href="Reference">
                         <h6 class="card-title">Reference</h6>
                         <p class="card-desc">Aylien Sentiment Analysis</p>
                         <p class="card-icon">icon</p>
                        </a></li>
+                    </div> -->
+                    <li class="card right-card">
+                        <a href="">
+                            <h6 class="card-title">Analyze Here</h6>
+                            <p class="card-desc">There is a wealth of information out there hidden in ...</p>
+                            <p class="card-icon">icon</p>
+                           </a>
+                       
+                       </li>
                   </ul>
                 </nav>
         </header>
         <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+
+            <section class="concept">
+               <div class="concept-content">
+                   <h2 class="concept-title">sentiment analysis concept</h2>
+                   <div class="img-concept">
+                   </div>
+                   <div class="p-concept">
+                       <p>
+                           Sentiment analysis is the interpretation and classification of emotions (positive, negative and neutral) within text data using text analysis techniques. Sentiment analysis allows businesses to identify customer sentiment toward products, brands or services in online conversations and feedback. </br></br> Sentiment analysis is a text analysis method that detects polarity (e.g. a positive or negative opinion) within text, whether a whole document, paragraph, sentence, or clause.
+                       </p>
+                    </div>
+               </div>
+            </section>
+            <section class="analysis">
+                <form class="analysis-form"onsubmit="return Client.handleSubmit(event)">
                     <input id="name" type="text" name="input" value=""  placeholder="Name">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
-            <section>
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div class="results">
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </div>
             </section>
         </main>
         <footer>

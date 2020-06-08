@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+$font: 'Libre Baskerville', serif;
+.concept {
+	height: 100vh;
+	width: 100%;
+	background-color: #00041b;
+	transition: background-color 1.5s ease-in;
+	.concept-content {
+		display: grid;
+		justify-items: center;
+		gap: 10px;
+		height: 100%;
+		.concept-title {
+			padding: 50px 0px 9px 0;
+			font-family: $font;
+			font-size: 1.7vmax;
+			font-weight: 700;
+			color: rgb(80, 80, 80);
+			text-transform: uppercase;
+		}
+		.img-concept {
+			img {
+				box-shadow: 1px 4px 9px 1px #545456;
+				height: 90%;
+				width: 100%;
+				margin: auto;
+				border-radius: 10px;
+			}
+		}
+		.p-concept {
+			width: 100%;
+			height: 100%;
+			p {
+				width: 70%;
+				margin: auto;
+				line-height: 1.5;
+				font-family: 'Libre Baskerville', serif;
+				color: white;
+				font-size: 18px;
+				padding: 0 10px 0 10px;
+			}
+		}
+	}
+}
