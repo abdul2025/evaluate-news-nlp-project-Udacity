@@ -1,4 +1,4 @@
-import logo from '../images/logo_tra.png';
+import logo from '../images/logo_t.png';
 import bookIcon from '../images/book.png';
 import computerIcon from '../images/computer.png';
 import reportIcon from '../images/report.png';

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>NLP Analysis --> 👍🏻</title>
     </head>
     <body>
         <div id= 'fullPageWarning'>
@@ -60,18 +60,41 @@
                </div>
             </section>
             <section class="analysis">
-                <form class="analysis-form"onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value=""  placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-                <div class="results">
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
-                </div>
+                <h2 class="analysis-title">Analyze Sentiment with NLP</h2>
+                <div class="analysis-content">
+                    <form class="analysis-form" onsubmit="return Client.handleSubmit(event)">
+                        <input id="text" type="text" name="input" value="" placeholder="Text" required minlength="6"> 
+                        <h4 class="error-message">Please fill the field</h4>
+                        <input id="btn" type="submit" name="" value="Analyze" onclick="return Client.handleSubmit(event)">
+                    </form>
+                    <div class="results">
+                        <div class="results-box">
+                                <div class="submitted-text-box">
+                                    <h1>Submitted Text</h1>
+                                    <p class="submitted-text">~~~~~~~~~~~~~~~</p>
+                                </div>
+                                <div class="result">
+                                    <h5>Result</h5>
+                                    <div class="prop">
+                                        <h6>polarity</h6>
+                                        <h6>polarity_confidence</h6>
+                                    </div>
+                                    <div class="prop-res">
+                                        <h5 class="polarity">Positive</h5>
+                                        <h5 class="polcConf">0.99</h5>
+                                    </div>
+                                    <div class="prop-bar">
+                                        <hr class="bar">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
             </section>
         </main>
         <footer>
-            <p>This is a footer</p>
+            <h3>copyright</h3>
+            <h3>contacts</h3>
         </footer>
     </div>
     </body>

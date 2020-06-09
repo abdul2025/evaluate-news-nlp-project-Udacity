@@ -1,10 +1,117 @@
 .analysis {
-	background-color: rgb(218, 218, 218);
+	background-color: #d8dddd;
 	height: 100vh;
 	width: 100%;
-	padding: 20px;
-	display: flex;
-	.analysis-form {
-		width: 50%;
+	display: grid;
+	.analysis-title {
+		color: black;
+		font-size: 30px;
+		justify-self: center;
+		align-self: center;
 	}
+	.analysis-content {
+		display: flex;
+		justify-content: space-around;
+		.analysis-form {
+			height: 50%;
+			display: grid;
+			gap: 10px;
+			.error-message {
+				border: 1px solid gray;
+				border-radius: 5px;
+				height: 24px;
+				padding: 4px 10px 0px 6px;
+				position: relative;
+				top: -6px;
+				left: 40px;
+				color: red;
+				background-color: white;
+				width: 250px;
+				display: none;
+			}
+			#text {
+				width: 450px;
+				padding: 10px;
+				font-size: 15px;
+				align-self: end;
+			}
+			#btn {
+				width: 200px;
+				justify-self: start;
+				padding: 10px;
+				background-color: #009fff;
+				color: white;
+				font-size: 15px;
+				cursor: pointer;
+			}
+		}
+		.results {
+			// border: 1px solid red;
+			width: 50%;
+			margin-bottom: 10px;
+			.results-box {
+				display: grid;
+				height: 100%;
+				border: 2px solid gray;
+				padding: 10px;
+				.submitted-text-box {
+					padding: 20px 0 0 50px;
+					color: #404141;
+					p {
+						margin-top: 20px;
+					}
+				}
+				.result {
+					display: grid;
+					gap: 10px;
+					align-items: center;
+					border-top: 1px solid gray;
+					.prop {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						justify-items: center;
+						align-self: end;
+					}
+					.prop-res {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						justify-items: center;
+						border: 1px solid black;
+						align-self: start;
+					}
+					.prop-bar {
+						text-align: center;
+						.bar {
+							height: 8px;
+							border-radius: 2px;
+							background: linear-gradient(
+								183deg,
+								#1cc3c4 14%,
+								rgba(6, 236, 236, 0.96) 51%
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+input {
+	border-radius: 4px;
+	border: none;
+	height: 40px;
+}
+
+input:invalid:required {
+	border: 1px solid #986b6b;
+}
+
+footer {
+	background-color: rgb(54, 51, 51);
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	color: white;
+	padding: 20px;
 }

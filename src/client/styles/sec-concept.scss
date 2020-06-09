@@ -3,7 +3,7 @@ $font: 'Libre Baskerville', serif;
 .concept {
 	height: 100vh;
 	width: 100%;
-	background-color: #00041b;
+	background-color: #d9d6d6;
 	transition: background-color 1.5s ease-in;
 	.concept-content {
 		display: grid;
@@ -13,7 +13,7 @@ $font: 'Libre Baskerville', serif;
 		.concept-title {
 			padding: 50px 0px 9px 0;
 			font-family: $font;
-			font-size: 1.7vmax;
+			font-size: 22px;
 			font-weight: 700;
 			color: rgb(80, 80, 80);
 			text-transform: uppercase;
@@ -35,7 +35,7 @@ $font: 'Libre Baskerville', serif;
 				margin: auto;
 				line-height: 1.5;
 				font-family: 'Libre Baskerville', serif;
-				color: white;
+				color: #2f3a46;
 				font-size: 18px;
 				padding: 0 10px 0 10px;
 			}

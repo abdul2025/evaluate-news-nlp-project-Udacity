@@ -1,6 +1,6 @@
 var path = require('path');
 const express = require('express');
-const mockAPIResponse = require(path.join(__dirname, 'mockAPI.js'));
+// const mockAPIResponse = require(path.join(__dirname, 'mockAPI.js'));
 var bodyParser = require('body-parser');
 var cors = require('cors');
 const aylien = require('aylien_textapi');
@@ -39,14 +39,12 @@ app.listen(8081, function () {
 	console.log('Example app listening on port 8081!');
 });
 
-app.get('/test', function (req, res) {
-	res.send(mockAPIResponse);
-});
+// app.get('/test', function (req, res) {
+// 	res.send(mockAPIResponse);
+// });
 
 app.post('/nlp', function (req, res) {
 	console.log('there is a request');
-	// console.log(req.body.value);
-	// res.send({ status: 200, message: 'this request seccessfully end' });
 	textapi.sentiment(
 		{
 			text: `${req.body.value}`,
@@ -54,6 +52,9 @@ app.post('/nlp', function (req, res) {
 		function (error, response) {
 			if (error === null) {
 				res.send(response);
+			} else {
+				res.send(error);
+				console.log(error);
 			}
 		}
 	);

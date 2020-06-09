@@ -8,7 +8,6 @@ import { scrollTo } from './js/scroll-handler.js';
 
 import './styles/resets.scss';
 import './styles/base.scss';
-import './styles/form.scss';
 import './styles/footer.scss';
 import './styles/header.scss';
 import './styles/wrapper.scss';
