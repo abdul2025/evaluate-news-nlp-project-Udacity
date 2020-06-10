@@ -17,9 +17,12 @@ app.use(
 		extended: true,
 	})
 );
-
 app.use(express.static('dist'));
 
+// const pp = path.parse(__dirname);
+// console.log(pp);
+// console.log(__dirname);
+// console.log(path.resolve('dist/index.html'));
 // console.log(`Your API key is ${process.env.API_KEY}`);
 
 const textapi = new aylien({
@@ -28,20 +31,13 @@ const textapi = new aylien({
 });
 
 app.get('/', function (req, res) {
-	// res.sendFile('dist/index.html');
-	// console.log(path.join(__dirname, '../../dist/index.html'));
-	res.sendFile(path.resolve(__dirname, '../../dist/index.html'));
+	res.sendFile('dist/index.html');
 });
-// console.log(path.resolve('src/client/views/index.html'));
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
 	console.log('Example app listening on port 8081!');
 });
-
-// app.get('/test', function (req, res) {
-// 	res.send(mockAPIResponse);
-// });
 
 app.post('/nlp', function (req, res) {
 	console.log('there is a request');

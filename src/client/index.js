@@ -1,8 +1,8 @@
-import { checkForName } from './js/nameChecker';
 import { handleSubmit } from './js/formHandler';
 import { evaluate } from './js/nlp-evaluate';
 import { createImg } from './js/createImg';
 import { scrollTo } from './js/scroll-handler.js';
+import { updateUI } from './js/updateUI.js';
 
 // console.log(checkForName);
 
@@ -16,4 +16,4 @@ import './styles/analysis.scss';
 
 console.log('CHANGE!!');
 
-export { checkForName, handleSubmit, scrollTo, evaluate, createImg };
+export { handleSubmit, scrollTo, evaluate, createImg, updateUI };
