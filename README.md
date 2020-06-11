@@ -8,7 +8,7 @@
 - Creating layouts and page design
 - Service workers
 - Using APIs and creating requests to external urls
-- Unit Test using Jest.js
+- Unit Testing Jest
 
 ### What is NLP ?
 
