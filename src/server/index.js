@@ -19,7 +19,7 @@ app.use(
 );
 app.use(express.static('dist'));
 
-// const pp = path.parse(__dirname);
+// const pp = path.parse(__dirname, './');
 // console.log(pp);
 // console.log(__dirname);
 // console.log(path.resolve('dist/index.html'));

@@ -2,6 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // to minify css files
+const TerserPlugin = require('terser-webpack-plugin'); // to minify js file
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // to minify html files
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
 	entry: './src/client/index.js',
@@ -10,6 +14,21 @@ module.exports = {
 		library: 'Client',
 	},
 	mode: 'production',
+	optimization: {
+		minimizer: [
+			new OptimizeCssAssetsPlugin(),
+			new TerserPlugin(),
+			new HtmlWebpackPlugin({
+				template: './src/client/views/index.html',
+				filename: './index.html',
+				minify: {
+					removeAttributeQuotes: true,
+					collapseWhitespace: true,
+					removeComments: true,
+				},
+			}),
+		],
+	},
 	module: {
 		rules: [
 			{
@@ -26,6 +45,10 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
+						options: {
+							name: '[name].[hash].[ext]',
+							outputPath: 'imgs',
+						},
 					},
 				],
 			},
@@ -37,5 +60,6 @@ module.exports = {
 			filename: './index.html',
 		}),
 		new MiniCssExtractPlugin({ filename: '[name].css' }),
+		new WorkboxPlugin.GenerateSW(),
 	],
 };
