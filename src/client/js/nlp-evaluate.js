@@ -6,7 +6,8 @@ async function evaluate(text) {
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(obj),
 	};
-	const response = await fetch('http://localhost:8081/nlp', options);
+
+	const response = await fetch('/nlp', options);
 	const data = await response.json();
 	// console.log(data);
 	/// update UI
