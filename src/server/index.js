@@ -1,6 +1,6 @@
 var path = require('path');
 const express = require('express');
-// const mockAPIResponse = require(path.join(__dirname, 'mockAPI.js'));
+
 var bodyParser = require('body-parser');
 var cors = require('cors');
 const aylien = require('aylien_textapi');
@@ -17,11 +17,14 @@ app.use(
 		extended: true,
 	})
 );
-app.use(express.static('dist'));
 
-// const pp = path.parse(__dirname, './');
+app.use(express.static(path.join(process.cwd(), '/dist')));
+
+// const pp = path.parse(__dirname);
 // console.log(pp);
-// console.log(__dirname);
+// console.log(process.cwd(), '/dist');
+// const dirPath = path.join(process.cwd(), '/dist');
+// console.log(dirPath);
 // console.log(path.resolve('dist/index.html'));
 // console.log(`Your API key is ${process.env.API_KEY}`);
 
@@ -31,11 +34,12 @@ const textapi = new aylien({
 });
 
 app.get('/', function (req, res) {
-	res.sendFile('dist/index.html');
+	res.sendFile(path.join(process.cwd(), '/dist/index.html'));
 });
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
+const port = process.env.PORT || 8081;
+app.listen(port, function () {
 	console.log('Example app listening on port 8081!');
 });
 
@@ -48,7 +52,6 @@ app.post('/nlp', function (req, res) {
 		function (error, response) {
 			if (error === null) {
 				res.send(response);
-				// console.log(response);
 			} else {
 				res.send(error);
 				console.log(error);
