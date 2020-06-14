@@ -4,10 +4,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"dev": "node src/server/index.js",
+		"start": "node src/server/index.js",
 		"build-prod": "webpack --config webpack.prod.js",
 		"build-dev": "webpack-dev-server  --config webpack.dev.js --open",
-		"heroku-postbuild": "webpack --config webpack.prod.js"
+		"build": "webpack --config webpack.prod.js"
 	},
 	"keywords": [],
 	"author": "",
