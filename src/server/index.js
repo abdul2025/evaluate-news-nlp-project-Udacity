@@ -33,7 +33,7 @@ const textapi = new aylien({
 	application_key: process.env.API_KEY,
 });
 
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
 	res.sendFile(path.join(process.cwd(), '/dist/index.html'));
 });
 
