@@ -16,8 +16,6 @@ function updateUI(data) {
 		objDoms.polarity.innerHTML = data.polarity;
 		objDoms.polcConf.innerHTML = data.polarity_confidence;
 	} else {
-		// clears input
-		objDoms.inputText.value = ' ';
 		// update UI with Error message
 		errUI();
 	}
@@ -26,6 +24,8 @@ function updateUI(data) {
 }
 
 function errUI() {
+	// clears input
+	objDoms.inputText.value = ' ';
 	const apiError = document.createElement('div');
 	const analysisPage = document.getElementById('analysis');
 	const html = `

@@ -1,3 +1,18 @@
-{
-    'presets': ['@babel/preset-env']
-}
+// {
+// 	"presets": ["@babel/preset-env"]
+// }
+{ "presets": ["@babel/preset-env"], "plugins": [["@babel/transform-runtime"]] }
+
+/* change this file from the above line to 
+the following lines in order to do the jest test accourding to https://jestjs.io/docs/en/webpack */
+// .babelrc
+// .babelrc
+// {
+// 	"presets": [["env", { "modules": false }]],
+// 	"plugins": ["syntax-dynamic-import"],
+// 	"env": {
+// 		"test": {
+// 			"plugins": ["dynamic-import-node"]
+// 		}
+// 	}
+// }

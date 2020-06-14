@@ -48,6 +48,7 @@ app.post('/nlp', function (req, res) {
 		function (error, response) {
 			if (error === null) {
 				res.send(response);
+				// console.log(response);
 			} else {
 				res.send(error);
 				console.log(error);

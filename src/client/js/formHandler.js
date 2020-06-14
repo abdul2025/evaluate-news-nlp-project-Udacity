@@ -4,10 +4,12 @@ function handleSubmit(event) {
 	let formText = document.getElementById('text').value;
 
 	// check if the text meet the require length
-	const erroMass = document.querySelector('.error-message');
-	formText.length === 0 || formText.length < 15
-		? (erroMass.style.display = 'block')
-		: Client.evaluate(formText); // send the text to evaluate Function
+	if (formText.length > 15) {
+		Client.evaluate(formText); // send the text to evaluate Function
+	} else {
+		const erroMass = document.querySelector('.error-message');
+		erroMass.style.display = 'block';
+	}
 }
 
 export { handleSubmit };
