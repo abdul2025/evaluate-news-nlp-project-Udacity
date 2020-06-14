@@ -1,8 +1,7 @@
-var path = require('path');
+const path = require('path');
 const express = require('express');
-
-var bodyParser = require('body-parser');
-var cors = require('cors');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const aylien = require('aylien_textapi');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -19,14 +18,6 @@ app.use(
 );
 
 app.use(express.static(path.join(process.cwd(), '/dist')));
-
-// const pp = path.parse(__dirname);
-// console.log(pp);
-// console.log(process.cwd(), '/dist');
-// const dirPath = path.join(process.cwd(), '/dist');
-// console.log(dirPath);
-// console.log(path.resolve('dist/index.html'));
-// console.log(`Your API key is ${process.env.API_KEY}`);
 
 const textapi = new aylien({
 	application_id: process.env.API_ID,
