@@ -38,9 +38,9 @@ app.get('*', function (req, res) {
 });
 
 // designates what port the app will listen to for incoming requests
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 app.listen(port, function () {
-	console.log('Example app listening on port 8081!');
+	console.log('Example app listening on port 8080!');
 });
 
 app.post('/nlp', function (req, res) {
