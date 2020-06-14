@@ -25,4 +25,4 @@ take a look at [here](https://docs.aylien.com/textapi/endpoints/#api-endpoints).
 A great step to take with your finished project would be to deploy it! Unfortunately its a bit out of scope for me to explain too much about how to do that here, but checkout [Netlify](https://www.netlify.com/) or [Heroku](https://www.heroku.com/) for some really intuitive free hosting options.
 
 ## Website link: 
-[Nlp-web-page](https://pages.github.com/).
+[Nlp-web-page](https://nlp-evaluates-sentiment-app.herokuapp.com).
