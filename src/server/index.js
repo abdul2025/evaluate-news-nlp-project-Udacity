@@ -33,14 +33,14 @@ const textapi = new aylien({
 	application_key: process.env.API_KEY,
 });
 
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
 	res.sendFile(path.join(process.cwd(), '/dist/index.html'));
 });
 
 // designates what port the app will listen to for incoming requests
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 app.listen(port, function () {
-	console.log('Example app listening on port 8080!');
+	console.log('Example app listening on port 8000!');
 });
 
 app.post('/nlp', function (req, res) {
