@@ -7,10 +7,7 @@ async function evaluate(text) {
 		body: JSON.stringify(obj),
 	};
 
-	const response = await fetch(
-		'https://nlp-evaluates-sentiment-app.herokuapp.com/nlp',
-		options
-	);
+	const response = await fetch('/nlp', options);
 	const data = await response.json();
 	// console.log(data);
 	/// update UI

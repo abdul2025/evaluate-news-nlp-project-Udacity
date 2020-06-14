@@ -43,8 +43,6 @@ app.listen(port, function () {
 	console.log('Example app listening on port 8081!');
 });
 
-console.log(process.env.PORT);
-
 app.post('/nlp', function (req, res) {
 	console.log('there is a request');
 	textapi.sentiment(
