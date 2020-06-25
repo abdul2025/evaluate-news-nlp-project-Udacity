@@ -13,9 +13,10 @@
 
 
 ### TO start 
-
-Run the npm i.
-start the server npm run start. 
+```
+npm i.
+npm run start. 
+```
 
 ### What is NLP ?
 
