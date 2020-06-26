@@ -29,15 +29,15 @@ module.exports = {
 			}),
 		],
 	},
-	// devServer: {
-	// 	host: 'localhost',
-	// 	port: 8080,
-	// 	proxy: {
-	// 		context: () => true,
-	// 		target: 'http://localhost:8000/',
-	// 		source: false,
-	// 	},
-	// },
+	devServer: {
+		host: 'localhost',
+		port: 8080,
+		proxy: {
+			context: () => true,
+			target: 'http://localhost:8000/',
+			source: false,
+		},
+	},
 	module: {
 		rules: [
 			{

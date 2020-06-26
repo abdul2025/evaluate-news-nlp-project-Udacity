@@ -12,15 +12,15 @@ module.exports = {
 		libraryTarget: 'var', // that one kind of many other to access the bundle global context of our assets js.code ex. (in index.html to handle event)
 		library: 'Client', /// name it whatever we want
 	},
-	// devServer: {
-	// 	host: 'localhost',
-	// 	port: 8080,
-	// 	proxy: {
-	// 		context: () => true,
-	// 		target: 'http://localhost:8000/',
-	// 		source: false,
-	// 	},
-	// },
+	devServer: {
+		host: 'localhost',
+		port: 8080,
+		proxy: {
+			context: () => true,
+			target: 'http://localhost:8000/',
+			source: false,
+		},
+	},
 	module: {
 		rules: [
 			{
