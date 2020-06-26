@@ -24,10 +24,9 @@ const textapi = new aylien({
 	application_key: process.env.API_KEY,
 });
 
-/// no need for request here becouse we using in the above static express
-// app.get('/', function (req, res) {
-// 	res.sendFile(path.join(process.cwd(), '/dist/index.html'));
-// });
+app.get('/', function (req, res) {
+	res.sendFile(path.join(process.cwd(), '/dist/index.html'));
+});
 
 // designates what port the app will listen to for incoming requests
 const port = process.env.PORT || 8000;

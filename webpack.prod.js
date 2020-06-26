@@ -29,6 +29,7 @@ module.exports = {
 			}),
 		],
 	},
+<<<<<<< HEAD
 	devServer: {
 		host: 'localhost',
 		port: 8080,
@@ -38,6 +39,8 @@ module.exports = {
 			source: false,
 		},
 	},
+=======
+>>>>>>> parent of 4f411fa... fix devServer webpack and modify its setting to default
 	module: {
 		rules: [
 			{
