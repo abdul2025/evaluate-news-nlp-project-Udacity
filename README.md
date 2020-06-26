@@ -10,6 +10,14 @@
 - Using APIs and creating requests to external urls
 - Unit Testing Jest
 
+
+
+### TO start 
+```
+npm i
+npm run start
+```
+
 ### What is NLP ?
 
 > Natural language processing (NLP) is a subfield of computer science, information engineering, and artificial intelligence
