@@ -8,7 +8,7 @@ async function evaluate(text) {
 	};
 	// const port = process.env.PORT || 8000;
 	// console.log(port);
-	const response = await fetch(`nlp`, options);
+	const response = await fetch(`http://localhost:8000/nlp`, options);
 	const data = await response.json();
 	// console.log(data);
 	/// update UI
