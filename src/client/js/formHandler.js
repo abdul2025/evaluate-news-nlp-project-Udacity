@@ -5,6 +5,7 @@ function handleSubmit(event) {
 
 	// check if the text meet the require length
 	if (formText.length > 15) {
+		console.log(formText);
 		Client.evaluate(formText); // send the text to evaluate Function
 	} else {
 		const erroMass = document.querySelector('.error-message');
