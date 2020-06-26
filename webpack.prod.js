@@ -29,18 +29,15 @@ module.exports = {
 			}),
 		],
 	},
-<<<<<<< HEAD
-	devServer: {
-		host: 'localhost',
-		port: 8080,
-		proxy: {
-			context: () => true,
-			target: 'http://localhost:8000/',
-			source: false,
-		},
-	},
-=======
->>>>>>> parent of 4f411fa... fix devServer webpack and modify its setting to default
+	// devServer: {
+	// 	host: 'localhost',
+	// 	port: 8080,
+	// 	proxy: {
+	// 		context: () => true,
+	// 		target: 'http://localhost:8000/',
+	// 		source: false,
+	// 	},
+	// },
 	module: {
 		rules: [
 			{
