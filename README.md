@@ -15,6 +15,7 @@
 ### TO start 
 ```
 npm i
+npm run build-prod/dev
 npm run start
 ```
 
