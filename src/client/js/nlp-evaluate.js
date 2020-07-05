@@ -8,11 +8,11 @@ async function evaluate(text) {
 	};
 	// const port = process.env.PORT || 8000;
 	// console.log(port);
-	const response = await fetch(`nlp`, options);
-	const data = await response.json();
 	// console.log(data);
 	/// update UI
 	try {
+		const response = await fetch(`nlp`, options);
+		const data = await response.json();
 		Client.updateUI(data);
 	} catch (error) {
 		console.log(error);
